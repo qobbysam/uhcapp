@@ -1,0 +1,42 @@
+{
+  "reporting_entity_name": "Oxford Health Plans LLC",
+  "reporting_entity_type": "Third-Party Administrator",
+  "reporting_structure": [
+    {
+      "reporting_plans": [
+        {
+          "plan_name": "United Healthcare EPO",
+          "plan_id": "364695064",
+          "plan_id_type": "EIN",
+          "plan_market_type": "group"
+        }
+      ],
+      "in_network_files": [
+        {
+          "description": "in-network files",
+          "location": "https://uhc-tic-mrf.azureedge.net/public-mrf/2022-10-01/2022-10-01_Oxford-Health-Plans-LLC_Third-Party-Administrator_OBH---Optum-Behavior-Health_P3_in-network-rates.json.gz"
+        },
+        {
+          "description": "in-network files",
+          "location": "https://uhc-tic-mrf.azureedge.net/public-mrf/2022-10-01/2022-10-01_Oxford-Health-Plans-LLC_Third-Party-Administrator_Optum-Health-Behavioral-Services--OHBS--1018476_C2_in-network-rates.json.gz"
+        },
+        {
+          "description": "in-network files",
+          "location": "https://uhc-tic-mrf.azureedge.net/public-mrf/2022-10-01/2022-10-01_Oxford-Health-Plans-LLC_Third-Party-Administrator_Liberty-Network_9_in-network-rates.json.gz"
+        },
+        {
+          "description": "in-network files",
+          "location": "https://uhc-tic-mrf.azureedge.net/public-mrf/2022-10-01/2022-10-01_Oxford-Health-Plans-LLC_Third-Party-Administrator_OHPH-ST-3_C2_in-network-rates.json.gz"
+        },
+        {
+          "description": "in-network CMC Cancer shared files",
+          "location": "https://saticprod.blob.core.windows.net/optumeven/CMC_CRS_MRRF.json"
+        },
+        {
+          "description": "in-network files",
+          "location": "https://uhc-tic-mrf.azureedge.net/public-mrf/2022-10-01/2022-10-01_Oxford-Health-Plans-LLC_Third-Party-Administrator_OHPH-Chiro-1_C2_in-network-rates.json.gz"
+        }
+      ]
+    }
+  ]
+}

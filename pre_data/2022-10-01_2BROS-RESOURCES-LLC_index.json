@@ -1,0 +1,50 @@
+{
+  "reporting_entity_name": "United Healthcare Services, Inc.",
+  "reporting_entity_type": "Third-Party Administrator",
+  "reporting_structure": [
+    {
+      "reporting_plans": [
+        {
+          "plan_name": "United Healthcare POS",
+          "plan_id": "802861086",
+          "plan_id_type": "EIN",
+          "plan_market_type": "group"
+        }
+      ],
+      "in_network_files": [
+        {
+          "description": "in-network files",
+          "location": "https://uhc-tic-mrf.azureedge.net/public-mrf/2022-10-01/2022-10-01_United-Healthcare-Services--Inc-_Third-Party-Administrator_Upper-Peninsula-Michigan-1656891_C2_in-network-rates.json.gz"
+        },
+        {
+          "description": "in-network files",
+          "location": "https://uhc-tic-mrf.azureedge.net/public-mrf/2022-10-01/2022-10-01_United-Healthcare-Services--Inc-_Third-Party-Administrator_OHPH-Acupuncture-Massage-Naturopath-4_C2_in-network-rates.json.gz"
+        },
+        {
+          "description": "in-network files",
+          "location": "https://uhc-tic-mrf.azureedge.net/public-mrf/2022-10-01/2022-10-01_United-Healthcare-Services--Inc-_Third-Party-Administrator_OHPH-Chiro-1_C2_in-network-rates.json.gz"
+        },
+        {
+          "description": "in-network files",
+          "location": "https://uhc-tic-mrf.azureedge.net/public-mrf/2022-10-01/2022-10-01_United-Healthcare-Services--Inc-_Third-Party-Administrator_Core-POS-1159400_A3_in-network-rates.json.gz"
+        },
+        {
+          "description": "in-network files",
+          "location": "https://uhc-tic-mrf.azureedge.net/public-mrf/2022-10-01/2022-10-01_United-Healthcare-Services--Inc-_Third-Party-Administrator_Choice-Plus-POS-1008476_C2_in-network-rates.json.gz"
+        },
+        {
+          "description": "in-network files",
+          "location": "https://uhc-tic-mrf.azureedge.net/public-mrf/2022-10-01/2022-10-01_United-Healthcare-Services--Inc-_Third-Party-Administrator_Optum-Health-Behavioral-Services--OHBS--1018476_C2_in-network-rates.json.gz"
+        },
+        {
+          "description": "in-network files",
+          "location": "https://uhc-tic-mrf.azureedge.net/public-mrf/2022-10-01/2022-10-01_United-Healthcare-Services--Inc-_Third-Party-Administrator_OHPH-ST-3_C2_in-network-rates.json.gz"
+        }
+      ],
+      "allowed_amount_file": {
+        "description": "allowed amount file",
+        "location": "https://uhc-tic-mrf.azureedge.net/public-mrf/2022-10-01/2022-10-01_2BROS-RESOURCES-LLC_United-Healthcare-POS_allowed-amounts.json.gz"
+      }
+    }
+  ]
+}

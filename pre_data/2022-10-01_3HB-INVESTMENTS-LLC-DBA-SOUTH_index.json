@@ -1,0 +1,21 @@
+{
+  "reporting_entity_name": "United HealthCare Services",
+  "reporting_entity_type": "Third-Party Administrator",
+  "reporting_structure": [
+    {
+      "reporting_plans": [
+        {
+          "plan_name": "UHC CHOICE PLUS/UBH",
+          "plan_id": "272362589",
+          "plan_id_type": "EIN",
+          "plan_market_type": "group"
+        }
+      ],
+      "in_network_files": [],
+      "allowed_amount_file": {
+        "description": "allowed amount file",
+        "location": "https://uhc-tic-mrf.azureedge.net/public-mrf/2022-10-01/2022-10-01_3HB-INVESTMENTS-LLC-DBA-SOUTH_UHC-CHOICE-PLUSUBH_allowed-amounts.json.gz"
+      }
+    }
+  ]
+}

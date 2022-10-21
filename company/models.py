@@ -8,7 +8,7 @@ from django.db import models
 
 class ReportingEntityModel(models.Model):
     entity_name = models.CharField(max_length = 255)
-    entity_type = models.CharField(max_length=15)
+    entity_type = models.CharField(max_length=50)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:

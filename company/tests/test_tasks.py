@@ -6,7 +6,7 @@ from django.test.utils import override_settings
 from django.test import TestCase
 from company.models import CompanyModel
 from uhcapp.settings.base import BASE_DIR
-from company.tasks import check_regex, extract_name_path, data_to_company
+from company.task_helpers import check_regex, extract_name_path, data_to_company
 
 NEW_BASE = os.path.join(BASE_DIR, 'company', 'tests')
 

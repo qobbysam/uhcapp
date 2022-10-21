@@ -1,0 +1,79 @@
+version: '3.9'
+services:
+  db:
+    image: postgres
+    volumes:
+     - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+    expose:
+      - "5433"
+    ports:
+      - "5433:5433"
+    command: -p 5433
+  
+
+  web:
+    build: .
+    volumes:
+     - .:/app/
+ 
+    command: > 
+        sh -c "
+              python manage.py collectstatic --settings='uhcapp.settings.prod' --noinput   &&
+              python manage.py migrate --settings='uhcapp.settings.prod' && 
+              python manage.py initdb --settings='uhcapp.settings.prod' &&
+              python manage.py load_company --folder_path=pre_data --settings='uhcapp.settings.prod' &&
+              python manage.py runserver 0.0.0.0:8500  --settings='uhcapp.settings.prod' "
+
+
+    
+    ports:
+        - "8500:8500"    
+    environment:
+      - ALLOWED_HOSTS
+      - SECRET_KEY
+      - POSTGRES_DB
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - DB_HOST
+      - DB_PORT
+      - FIRST_ADMIN_USERNAME
+      - FIRST_ADMIN_EMAIL
+      - FIRST_ADMIN_PASSWORD
+      - SITE_BASE_URL
+    depends_on:
+      - db
+
+
+
+  cluster:
+    build: .
+    restart: always
+    volumes:
+     - .:/app/
+    command: > 
+        sh -c "
+              python manage.py qcluster --settings='uhcapp.settings.prod'
+               "
+
+
+    
+    environment:
+      - ALLOWED_HOSTS
+      - SECRET_KEY
+      - POSTGRES_DB
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - DB_HOST
+      - DB_PORT
+      - FIRST_ADMIN_USERNAME
+      - FIRST_ADMIN_EMAIL
+      - FIRST_ADMIN_PASSWORD
+      - SITE_BASE_URL
+
+    depends_on:
+      - db
+      

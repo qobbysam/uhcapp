@@ -19,33 +19,43 @@ DATABASES = {
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
         'HOST': os.environ.get('DB_HOST'),
         'PORT': os.environ.get('DB_PORT'),
-        'ATOMIC_REQUESTS': True,
     }
 }
 
 
 Q_CLUSTER = {
-    'redis': {
-        'host': os.environ.get('REDISHOST'),
-        'port': os.environ.get('REDISPORT'),
-        'db': os.environ.get('REDISDB'),
-        'password': os.environ.get('REDISPASSWORD'),
-        'socket_timeout': None,
-        'charset': 'utf-8',
-        'errors': 'strict',
-        'unix_socket_path': None
-    }
+    'name': 'DjangORM',
+    'workers': 4,
+    'timeout': 90,
+    'retry': 120,
+    'queue_limit': 50,
+    'bulk': 10,
+    'orm': 'default'
 }
+
+
+# Q_CLUSTER = {
+#     'redis': {
+#         'host': os.environ.get('REDISHOST'),
+#         'port': os.environ.get('REDISPORT'),
+#         'db': os.environ.get('REDISDB'),
+#         'password': os.environ.get('REDISPASSWORD'),
+#         'socket_timeout': None,
+#         'charset': 'utf-8',
+#         'errors': 'strict',
+#         'unix_socket_path': None
+#     }
+# }
 
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 
 
 #choose whoosh but elastic search is better for perfomance
 import os
+WHOOSH = os.path.join(BASE_DIR, 'whoosh')
 
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
-        'PATH': os.path.join(os.path.dirname(__file__), 'whoosh_index'),
-    },
+        'PATH': WHOOSH },
 }

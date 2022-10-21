@@ -16,7 +16,9 @@ from drf_haystack.filters import HaystackAutocompleteFilter
 from company.models import CompanyModel, ReportingEntityModel
 from company.serializers import CompanyIndexSerializer, CompanyResultSerializer, FileUploadSerializer
 from company.serializers import CompanyAutocompleteSerializer,  ReportingEntityAutocompleteSerializer
-from company.tasks import check_regex, consume_one_file
+from company.tasks import consume_one_file
+from company.task_helpers import check_regex
+
 # Create your views here.
 
 
